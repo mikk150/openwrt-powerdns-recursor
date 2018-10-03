@@ -13,7 +13,7 @@ PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_URL:=https://downloads.powerdns.com/releases/
-#PKG_MD5SUM:=5eda92118fc8f82a0b8b198b859fa37f
+PKG_MD5SUM:=bd974f85944baa67338998d33bcd6120
 
 PKG_LICENSE:=MIT
 PKG_LICENSE_FILES:=LICENSE
@@ -33,6 +33,7 @@ define Package/pdns-recursor
 	CATEGORY:=Network
 	TITLE:=PowerDNS-Recursor
 	URL:=https://github.com/PowerDNS/pdns
+	DEPENDS:= +boost +lua +libopenssl
 endef
 
 define Package/pdns-recursor/description
