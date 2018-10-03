@@ -28,23 +28,23 @@ PKG_BUILD_PARALLEL:=1
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/pdns_recursor
+define Package/powerdns_recursor
 	SECTION:=net
 	CATEGORY:=Network
 	TITLE:=PowerDNS-Recursor
 	URL:=https://github.com/PowerDNS/pdns
 endef
 
-define Package/pdns_recursor/description
- pdns_recursor is a versatile high performance recursing nameserver.
+define Package/powerdns_recursor/description
+	powerdns_recursor is a versatile high performance recursing nameserver.
 endef
 
-define Package/pdns_recursor/conffiles
-/etc/powerdns/recursor.conf
-/etc/powerdns/forward.conf
+define Package/powerdns_recursor/conffiles
+	/etc/powerdns/recursor.conf
+	/etc/powerdns/forward.conf
 endef
 
-define Package/pdns_recursor/install
+define Package/powerdns_recursor/install
 	$(INSTALL_DIR) $(1)/etc/init.d
 	$(INSTALL_DIR) $(1)/etc/powerdns
 	$(INSTALL_BIN) ./files/pdns-recursor.init $(1)/etc/init.d/pdns-recursor
