@@ -8,11 +8,11 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=pdns-recursor
-PKG_VERSION:=3.7.0-rc1
+PKG_VERSION:=4.1.4
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
-PKG_SOURCE_URL:=https://downloads.powerdns.com/testing/
+PKG_SOURCE_URL:=https://downloads.powerdns.com/releases/
 #PKG_MD5SUM:=5eda92118fc8f82a0b8b198b859fa37f
 
 PKG_LICENSE:=MIT
